@@ -24,7 +24,7 @@ btn_registrar.addEventListener('click', (e)=>{
 });
 
 async function adicionarCliente(stringUrl){
-    let stringCompleta = 'http://localhost:3000/auth/login_cliente'+stringUrl;
+    let stringCompleta = 'https://hackathon-chinelinho.herokuapp.com/auth/login_cliente'+stringUrl;
     console.log(stringCompleta);
     const dados = await fetch(stringCompleta);
     const resul = await dados.json();

@@ -24,7 +24,7 @@ btn_registrar.addEventListener('click', (e)=>{
 });
 
 async function adicionarCliente(stringUrl){
-    let stringCompleta = 'http://localhost:3000/auth/registro'+stringUrl;
+    let stringCompleta = 'https://hackathon-chinelinho.herokuapp.com/auth/registro'+stringUrl;
     const dados = await fetch(stringCompleta);
     const resul = await dados.json();
     msgBack.innerHTML = resul.msg;
@@ -52,7 +52,7 @@ async function logarUsuario(stringUrl){
     cnpj = dadosString[1];
     senha = dadosString[3];
 
-    let stringCompleta = 'http://localhost:3000/auth/login_cliente'+('/'+cnpj+'/'+senha);
+    let stringCompleta = 'https://hackathon-chinelinho.herokuapp.com/auth/login_cliente'+('/'+cnpj+'/'+senha);
     const dados = await fetch(stringCompleta);
     const resul = await dados.json();
     localStorage.setItem('token',resul.token);
